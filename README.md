@@ -13,7 +13,7 @@ it isn't compatible with its configs/items as this one is powered by Polymer
 ### This mod is still far from finished content wise. If you have ideas/requests feel free to create an issue on github!
 
 ## Getting Started
-You can check all recipes by crafting Book of Brewery (1 glass bottle and 1 book).
+You can check tutorial (WITHOUT RECIPES!!!) by crafting Book of Brewery (1 glass bottle and 1 book).
 
 ### Cooking/Boiling with Cauldron (Preparing mixtures)
 Using cauldron is quite simple. You just need to drop ingredients to cauldron filled with water 
