@@ -128,28 +128,29 @@ public class BookOfBreweryItem extends Item implements PolymerItem {
 
 
         var indexEntries = new ArrayList<Text>();
-        indexEntries.add(Text.translatable("polydex.brewery.recipes").formatted(Formatting.BOLD, Formatting.UNDERLINE, Formatting.RED));
-        indexEntries.add(Text.empty());
-
-        for (var e : types) {
-            var type = e.getValue();
-            int index = -1;
-            try {
-                index = buildInfo(e.getKey(), e.getValue(), barrelAgingMultiplier, cookingTimeMultiplier);
-            } catch (Throwable e2) {
-                e2.printStackTrace();
-            }
-            if (index != -1) {
-                int finalIndex = index;
-                indexEntries.add(type.looks().nameSelector().select(7).text().copy()
-                        .styled(x -> x.withClickEvent(new ClickEvent.ChangePage(1001 + finalIndex)).withUnderline(true)));
-
-                if (indexEntries.size() == 12) {
-                    builder.addPage(indexEntries.toArray(new Text[0]));
-                    indexEntries.clear();
-                }
-            }
-        }
+        // ALL RECIPES ARE SECRET! :D
+//        indexEntries.add(Text.translatable("polydex.brewery.recipes").formatted(Formatting.BOLD, Formatting.UNDERLINE, Formatting.RED));
+//        indexEntries.add(Text.empty());
+//
+//        for (var e : types) {
+//            var type = e.getValue();
+//            int index = -1;
+//            try {
+//                index = buildInfo(e.getKey(), e.getValue(), barrelAgingMultiplier, cookingTimeMultiplier);
+//            } catch (Throwable e2) {
+//                e2.printStackTrace();
+//            }
+//            if (index != -1) {
+//                int finalIndex = index;
+//                indexEntries.add(type.looks().nameSelector().select(7).text().copy()
+//                        .styled(x -> x.withClickEvent(new ClickEvent.ChangePage(1001 + finalIndex)).withUnderline(true)));
+//
+//                if (indexEntries.size() == 12) {
+//                    builder.addPage(indexEntries.toArray(new Text[0]));
+//                    indexEntries.clear();
+//                }
+//            }
+//        }
 
         if (!indexEntries.isEmpty()) {
             builder.addPage(indexEntries.toArray(new Text[0]));
